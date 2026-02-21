@@ -1,0 +1,58 @@
+import { v4 as uuid } from 'uuid'
+
+export const SEED_TASKS = [
+  {
+    id: uuid(),
+    title: 'Design wireframes',
+    description: 'Create initial Figma mockups for the homepage redesign project.',
+    status: 'done',
+    priority: 'high',
+    dueDate: '2025-03-01',
+    createdAt: Date.now(),
+  },
+  {
+    id: uuid(),
+    title: 'Set up CI/CD pipeline',
+    description: 'Configure GitHub Actions for automated testing and deployment.',
+    status: 'inprogress',
+    priority: 'high',
+    dueDate: '2025-03-15',
+    createdAt: Date.now(),
+  },
+  {
+    id: uuid(),
+    title: 'Write API documentation',
+    description: 'Document all REST endpoints using Swagger / OpenAPI annotations.',
+    status: 'inprogress',
+    priority: 'medium',
+    dueDate: '2025-03-20',
+    createdAt: Date.now(),
+  },
+  {
+    id: uuid(),
+    title: 'User interviews',
+    description: 'Conduct 5 user interviews and synthesize key insights into actionable items.',
+    status: 'todo',
+    priority: 'medium',
+    dueDate: '2025-03-25',
+    createdAt: Date.now(),
+  },
+  {
+    id: uuid(),
+    title: 'Performance audit',
+    description: 'Run Lighthouse audits on all pages and address critical bottlenecks.',
+    status: 'todo',
+    priority: 'low',
+    dueDate: '2025-04-01',
+    createdAt: Date.now(),
+  },
+  {
+    id: uuid(),
+    title: 'Accessibility review',
+    description: 'Audit all UI components to ensure WCAG 2.1 AA compliance.',
+    status: 'todo',
+    priority: 'low',
+    dueDate: '2025-04-10',
+    createdAt: Date.now(),
+  },
+]

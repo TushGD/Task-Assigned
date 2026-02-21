@@ -1,0 +1,98 @@
+/* ── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Root variables ────────────────────────────────────── */
+:root {
+  --bg-base:      #EDE9E3;
+  --bg-surface:   #FDFCFA;
+  --bg-header:    #FDFCFA;
+  --bg-col:       #E8E3DC;
+  --bg-col-over:  #EDE9E3;
+  --bg-input:     #F9F7F4;
+  --bg-muted:     #F5F0E8;
+  --bg-modal:     #FDFCFA;
+
+  --border:       #E5E1D8;
+  --border-mid:   #D6D0C8;
+
+  --text-primary: #1C1917;
+  --text-secondary:#57534E;
+  --text-muted:   #78716C;
+  --text-dim:     #A8A29E;
+  --text-faint:   #C7C2BA;
+
+  --accent-blue:  #2563EB;
+  --accent-amber: #D97706;
+  --accent-green: #059669;
+  --accent-red:   #DC2626;
+
+  --font-display: 'Playfair Display', serif;
+  --font-sans:    'DM Sans', sans-serif;
+
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 18px;
+
+  --shadow-card:  0 1px 3px rgba(28,25,23,.08), 0 0 0 1px rgba(28,25,23,.05);
+  --shadow-hover: 0 8px 28px rgba(28,25,23,.11), 0 2px 8px rgba(28,25,23,.06);
+  --shadow-modal: 0 32px 80px rgba(0,0,0,.16);
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+html, body, #root { height: 100%; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-thumb  { background: var(--border-mid); border-radius: 2px; }
+
+/* ── Form elements ─────────────────────────────────────── */
+input, textarea, select {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 13px;
+  width: 100%;
+  outline: none;
+  transition: border-color .15s;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent-blue); }
+input::placeholder, textarea::placeholder { color: var(--text-faint); }
+textarea { resize: vertical; }
+select option { background: var(--bg-surface); color: var(--text-primary); }
+input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .5; }
+
+/* ── Buttons ───────────────────────────────────────────── */
+button { cursor: pointer; font-family: var(--font-sans); transition: opacity .15s, transform .1s; }
+button:active { opacity: .8; transform: scale(0.98); }
+
+/* ── Animations ────────────────────────────────────────── */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.93) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 860px)  { .board-grid { grid-template-columns: 1fr !important; } }
+@media (max-width: 600px)  { .header-row { flex-direction: column !important; align-items: stretch !important; } }

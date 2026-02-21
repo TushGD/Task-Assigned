@@ -1,0 +1,85 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-col);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  min-height: 500px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.columnOver {
+  background: #1a1a30;
+  border-color: color-mix(in srgb, var(--col-accent) 40%, transparent);
+}
+
+.columnHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.columnLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--col-accent);
+  flex-shrink: 0;
+}
+
+.labelText {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: #c0c0d0;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: color-mix(in srgb, var(--col-accent) 18%, transparent);
+  color: var(--col-accent);
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.dropZone {
+  height: 60px;
+  border: 2px dashed color-mix(in srgb, var(--col-accent) 40%, transparent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color-mix(in srgb, var(--col-accent) 60%, transparent);
+  font-size: 12px;
+  letter-spacing: 1px;
+  animation: fadeIn 0.15s ease;
+}
+
+.emptyState {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  min-height: 80px;
+}

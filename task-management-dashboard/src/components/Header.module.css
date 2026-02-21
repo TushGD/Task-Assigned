@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 28px;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  letter-spacing: 4px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 2px;
+}
+
+.controls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.prioritySelect {
+  width: auto;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.btnPrimary {
+  background: var(--accent-blue);
+  color: #fff;
+  border: none;
+}
+
+.btnPrimary:hover {
+  opacity: 0.88;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-mid);
+}
+
+.btnSecondary:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}

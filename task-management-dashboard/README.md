@@ -2,7 +2,7 @@
 
 A sleek, dark-themed Kanban-style task management dashboard built with React + Vite. Drag tasks between columns, filter by priority, and persist everything in localStorage — no backend required.
 
-🔗 **[Live Demo](#)** · 📦 **[Repository](#)**
+🔗 **[Live Demo](https://task-manage-one-orpin.vercel.app/)** · 📦 **[Repository](#)**
 
 ---
 

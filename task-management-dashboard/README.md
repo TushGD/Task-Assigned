@@ -99,12 +99,6 @@ npm run preview
 3. Framework preset: **Vite** — build command `npm run build`, output `dist`
 4. Deploy
 
-### Netlify
-1. Push repository to GitHub
-2. Connect repo at [app.netlify.com](https://app.netlify.com)
-3. Build command: `npm run build` · Publish directory: `dist`
-4. Deploy
-
 ---
 
 ## Challenges & Solutions
